@@ -7,7 +7,7 @@ import {
   CellWrapper,
   FirstRowWrapper,
   TableWrapper
-} from '../styledComponents/CalendarGrid';
+} from '../UI/CalendarGrid';
 
 const CalendarGrid = ({ startDay, openModalHandler }) => {
   const day = startDay.clone().subtract(1, 'day');

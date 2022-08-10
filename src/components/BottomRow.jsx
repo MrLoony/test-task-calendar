@@ -1,6 +1,6 @@
 import React from 'react';
 import { BiLeftArrow, BiRightArrow } from 'react-icons/bi';
-import {ButtonWrapper, DivWrapper, MonthControl, TextWrapper, ExtraButton} from '../styledComponents/BottomRow';
+import {ButtonWrapper, DivWrapper, MonthControl, TextWrapper, ExtraButton} from '../UI/BottomRow';
 
 const BottomRow = ({ currentMonth, prevMonthHandler, nextMonthHandler, currentMonthHandler }) => (
   <DivWrapper>

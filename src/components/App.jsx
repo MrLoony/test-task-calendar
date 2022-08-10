@@ -4,7 +4,7 @@ import { CalendarGrid } from './CalendarGrid';
 import { BottomRow } from './BottomRow';
 import { Header } from './Header';
 import { AddModal } from './AddModal';
-import { Container, HeaderWrapper, MainWrapper, ScreenWrapper } from '../styledComponents/App';
+import { Container, HeaderWrapper, MainWrapper, ScreenWrapper } from '../UI/App';
 
 function App() {
   useEffect(() => {

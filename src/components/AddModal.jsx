@@ -13,7 +13,7 @@ import {
   ModalFrame4,
   ModalFrame5,
   ModalFrame6
-} from '../styledComponents/AddModal';
+} from '../UI/AddModal';
 
 const AddModal = (closeButtonHandler, item, newItem, changeEventHandler) => {
   return (

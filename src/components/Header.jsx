@@ -1,6 +1,6 @@
 import React from 'react';
 import { BsSearch } from 'react-icons/bs';
-import {Container} from "../styledComponents/App";
+import {Container} from "../UI/App";
 import {
   ControlButtons,
   ControlButtonsWrapper,
@@ -8,7 +8,7 @@ import {
   IconWrapper,
   InputArea,
   InputWrapper
-} from "../styledComponents/Header";
+} from "../UI/Header";
 
 const Header = () => (
   <Container>
