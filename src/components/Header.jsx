@@ -1,7 +1,7 @@
 import React from 'react';
 import { BsSearch } from 'react-icons/bs';
-import {Container} from "../UI/App";
 import {
+  Container,
   ControlButtons,
   ControlButtonsWrapper,
   ControlWrapper,
