@@ -6,10 +6,10 @@ import {
   CellTitle,
   CellWrapper,
   FirstRowWrapper,
-  TableWrapper
+  TableWrapper,
 } from '../UI/CalendarGrid';
 
-const CalendarGrid = ({ startDay, openModalHandler }) => {
+function CalendarGrid({ startDay, openModalHandler }) {
   const day = startDay.clone().subtract(1, 'day');
   const daysArray = [...Array(42)].map(() => day.add(1, 'day').clone());
   const firstWeekArray = daysArray.splice(0, 7);
@@ -36,6 +36,6 @@ const CalendarGrid = ({ startDay, openModalHandler }) => {
       </TableWrapper>
     </>
   );
-};
+}
 
-export { CalendarGrid };
+export default CalendarGrid;

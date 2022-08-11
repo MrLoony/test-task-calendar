@@ -4,6 +4,7 @@ import {
   AddModalWrapper,
   CloseButton,
   ExtraButton,
+  InputDate,
   InputDescription,
   InputMembers,
   InputTitle,
@@ -12,14 +13,14 @@ import {
   ModalFrame3,
   ModalFrame4,
   ModalFrame5,
-  ModalFrame6
+  ModalFrame6,
 } from '../UI/AddModal';
 
-const AddModal = (closeButtonHandler, item, newItem, changeEventHandler) => {
+function AddModal(closeModalHandler, item, newItem, changeEventHandler) {
   return (
     <AddModalWrapper>
       <ModalFrame1>
-        <CloseButton onClick={closeButtonHandler}>
+        <CloseButton onClick={closeModalHandler}>
           <GrFormClose />
         </CloseButton>
       </ModalFrame1>
@@ -30,7 +31,7 @@ const AddModal = (closeButtonHandler, item, newItem, changeEventHandler) => {
           placeholder="Событие"
           value={item.title}
           onChange={(e) => changeEventHandler(e.target.value, 'title')}
-        ></InputTitle>
+        />
       </ModalFrame2>
 
       <ModalFrame3>
@@ -39,7 +40,7 @@ const AddModal = (closeButtonHandler, item, newItem, changeEventHandler) => {
           placeholder="День, месяц, год"
           value={item.date}
           onChange={(e) => changeEventHandler(e.target.value, 'date')}
-        ></InputDate>
+        />
       </ModalFrame3>
 
       <ModalFrame4>
@@ -48,7 +49,7 @@ const AddModal = (closeButtonHandler, item, newItem, changeEventHandler) => {
           placeholder="Имена участников"
           value={item.members}
           onChange={(e) => changeEventHandler(e.target.value, 'members')}
-        ></InputMembers>
+        />
       </ModalFrame4>
 
       <ModalFrame5>
@@ -56,7 +57,7 @@ const AddModal = (closeButtonHandler, item, newItem, changeEventHandler) => {
           placeholder="Описание"
           value={item.description}
           onChange={(e) => changeEventHandler(e.target.value, 'description')}
-        ></InputDescription>
+        />
       </ModalFrame5>
 
       <ModalFrame6>
@@ -65,6 +66,6 @@ const AddModal = (closeButtonHandler, item, newItem, changeEventHandler) => {
       </ModalFrame6>
     </AddModalWrapper>
   );
-};
+}
 
-export { AddModal };
+export default AddModal;

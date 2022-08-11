@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import moment from 'moment';
-import { CalendarGrid } from './CalendarGrid';
+import CalendarGrid from './CalendarGrid';
 import { BottomRow } from './BottomRow';
 import { Header } from './Header';
-import { AddModal } from './AddModal';
 import { Container, HeaderWrapper, MainWrapper, ScreenWrapper } from '../UI/App';
+import Modal from './Modal';
 
 function App() {
   useEffect(() => {
@@ -39,15 +39,23 @@ function App() {
   };
   const currentMonthHandler = () => setCurrentMonth(moment());
 
-  const [isShowModal, setShowModal] = useState(false);
+  const [modalActive, setModalActive] = useState(false);
 
   const openModalHandler = () => {
-    setShowModal(true);
+    setModalActive(true);
+  };
+
+  const closeModalHandler = () => {
+    setModalActive(false);
   };
 
   return (
     <>
-      {isShowModal ? <AddModal /> : null}
+      <Modal
+        active={modalActive}
+        setActive={setModalActive}
+        closeModalHandler={closeModalHandler}
+      />
       <ScreenWrapper>
         <HeaderWrapper>
           <Header />
